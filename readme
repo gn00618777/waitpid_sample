@@ -1,0 +1,5 @@
+use ret = waitpid(pid, &staus, WNOHANG) to inspect child process is exist or not
+
+ret = 0, child process is exist
+ret > 0, child process is exit, return value is child pid
+ret = -1, waitpid fail, check errno is ECHILD or not
